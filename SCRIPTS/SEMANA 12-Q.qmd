@@ -1,0 +1,59 @@
+---
+title: "SEMANA 12"
+author: "ARDILES MARALLANO VALERIA"
+format: html
+editor: visual
+---
+
+## Semana 12
+
+IMPORTAMOS DATA CON EL ARCHIVO A TRABAJAR
+
+```{r}
+data <- read_csv("s03_treat_artritis.csv")
+```
+
+#EMPEZAMOS A CALCULAR LAS MEDIDAS DE DISPERSION (VARIANZA) \
+#medidas de dispersion \
+#varianza
+
+```{r}
+var(data$`Edad a`,na.rm = TRUE)
+```
+
+#DESVIACION ESTANDAR
+
+```{r}
+sd(data$`Edad a`,na.rm = TRUE)
+```
+
+#RANGO
+
+```{r}
+range(data$`Edad a`, na.rm = TRUE)
+```
+
+#RANGO INTERCUARTILICO
+
+```{r}
+IQR(data$`Edad a`, na.rm = TRUE)
+```
+
+#CONTINUAMOS CALCULANDO LA MEDIDAS DE POSICION
+
+```{r}
+quantile(data$`Edad a`,probs =c (0.25, 0.50, 0.75, 0.90), na.rm = TRUE)
+summary(data$`Edad a`)
+```
+
+#VER LAS 6 PRIMERAS FILAS DE LA DATA
+
+```{r}
+head(data)
+```
+
+#Resumenes de la variantes\
+
+```{r}
+summary(data)
+```
